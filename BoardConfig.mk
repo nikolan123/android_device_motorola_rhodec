@@ -25,6 +25,8 @@ ODM_MANIFEST_N_FILES := $(DEVICE_PATH)/sku/manifest_n.xml
 # Kernel
 BOARD_KERNEL_CMDLINE += androidboot.hab.product=rhodec
 TARGET_KERNEL_CONFIG += vendor/ext_config/moto-holi-rhodec.config
+# Match kernel build.config.common and the validated standalone kernel build.
+TARGET_KERNEL_CLANG_PATH := $(BUILD_TOP)/prebuilts/clang/kernel/linux-x86/clang-r416183b
 
 # Kernel Modules
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
