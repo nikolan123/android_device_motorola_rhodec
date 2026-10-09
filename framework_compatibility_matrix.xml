@@ -1,17 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-    SPDX-FileCopyrightText: The LineageOS Project
-    SPDX-License-Identifier: Apache-2.0
--->
-<!-- Device-specific framework compatibility matrix for rhodec -->
+<?xml version='1.0' encoding='utf-8'?>
 <compatibility-matrix version="1.0" type="framework">
-    <!-- Motorola Camera Image Tuner HAL -->
-    <hal format="hidl" optional="true">
-        <name>motorola.hardware.camera.imgtuner</name>
-        <version>1.0</version>
-        <interface>
-            <name>IImageTuning</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
+  <hal format="hidl" optional="true">
+    <name>motorola.hardware.camera.imgtuner</name>
+    <version>1.0</version>
+    <interface>
+      <name>IImageTuning</name>
+      <instance>default</instance>
+    </interface>
+  </hal>
+  <hal format="hidl" optional="true">
+    <name>vendor.nxp.nxpnfclegacy</name>
+    <version>1.0</version>
+    <interface>
+      <name>INxpNfcLegacy</name>
+      <instance>default</instance>
+    </interface>
+  </hal>
 </compatibility-matrix>
