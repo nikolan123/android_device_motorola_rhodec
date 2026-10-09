@@ -18,7 +18,7 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'device/motorola/rhodei',
+    'device/motorola/rhodec',
     'hardware/motorola',
     'vendor/motorola/sm6375-common',
     'vendor/qcom/opensource/display',
@@ -49,7 +49,7 @@ blob_fixups: blob_fixups_user_type = {
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'rhodei',
+    'rhodec',
     'motorola',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,

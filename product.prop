@@ -3,7 +3,7 @@ dalvik.vm.heapgrowthlimit=256m
 dalvik.vm.heapsize=512m
 
 # Google
-ro.opa.device_model_id=motorola-rhodei
+ro.opa.device_model_id=motorola-rhodec
 
 # Motorola
 ro.mot.build.customerid=global

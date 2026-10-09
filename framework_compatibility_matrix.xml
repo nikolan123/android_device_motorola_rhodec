@@ -3,7 +3,7 @@
     SPDX-FileCopyrightText: The LineageOS Project
     SPDX-License-Identifier: Apache-2.0
 -->
-<!-- Device-specific framework compatibility matrix for rhodei -->
+<!-- Device-specific framework compatibility matrix for rhodec -->
 <compatibility-matrix version="1.0" type="framework">
     <!-- Motorola Camera Image Tuner HAL -->
     <hal format="hidl" optional="true">

@@ -52,12 +52,11 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_PACKAGES += \
     init.mmi.overlay.rc \
-    init.nfc.sec.rc \
     init.oem.fingerprint2.sh
 
 # NFC
 PRODUCT_PACKAGES += \
-    android.hardware.nfc-service.sec \
+    android.hardware.nfc@1.2-service \
     com.android.nfc_extras \
     Tag
 
@@ -83,7 +82,7 @@ $(call soong_config_set,qtipower,tap_to_wake_node,/sys/devices/platform/soc/4a80
 
 # Sensors
 PRODUCT_PACKAGES += \
-    sensors.rhodei
+    sensors.rhodec
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
@@ -100,9 +99,18 @@ PRODUCT_PACKAGES += \
     firmware_WCNSS_mot_cfg.ini_symlink
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/motorola/rhodei/rhodei-vendor.mk)
+$(call inherit-product, vendor/motorola/rhodec/rhodec-vendor.mk)
 
 # Touch firmware for recovery
 PRODUCT_COPY_FILES += \
-    vendor/motorola/rhodei/proprietary/vendor/firmware/tm_novatek_ts_fw.bin:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/vendor/firmware/tm_novatek_ts_fw.bin \
-    vendor/motorola/rhodei/proprietary/vendor/firmware/tm_novatek_ts_mp.bin:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/vendor/firmware/tm_novatek_ts_mp.bin
+    vendor/motorola/rhodec/proprietary/vendor/firmware/tm_novatek_ts_fw.bin:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/vendor/firmware/tm_novatek_ts_fw.bin \
+    vendor/motorola/rhodec/proprietary/vendor/firmware/tm_novatek_ts_mp.bin:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/vendor/firmware/tm_novatek_ts_mp.bin
+
+# Global Chipone firmware must also be available before vendor is mounted.
+PRODUCT_COPY_FILES += \
+    vendor/motorola/rhodec/proprietary/vendor/firmware/ICNL9922.bin:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/vendor/firmware/ICNL9922.bin
+
+# Use the global stock Wi-Fi configuration instead of the common default.
+PRODUCT_COPY_FILES := $(filter-out %:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini,$(PRODUCT_COPY_FILES))
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini

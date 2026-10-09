@@ -1,4 +1,4 @@
-# All unpinned blobs are extracted from rhodei_g T1SSIS33.1-75-7-16
+# Device blobs: RETEU XT2223-1 T1SSS33.1-119-8-12 global stock
 
 # ACDB Data
 vendor/etc/acdbdata/Bluetooth_cal.acdb
@@ -190,7 +190,7 @@ vendor/lib64/motorola.hardware.camera.desktop@1.0.so
 vendor/lib64/motorola.hardware.camera.desktop@2.0.so
 vendor/lib64/motorola.hardware.camera.imgtuner@1.0.so
 vendor/lib64/hw/motorola.hardware.camera.imgtuner@1.0-impl.so
-system_ext/etc/permissions/com.motorola.imagertuning5.rhodei.xml
+system_ext/etc/permissions/com.motorola.imagertuning5.rhodec.xml
 
 
 # Camera - sensor
@@ -280,7 +280,7 @@ vendor/etc/sensors/config/sns_wrist_pedo.json
 vendor/etc/sensors/sns_reg_config
 
 # Thermal engine - configs
-vendor/etc/thermal-engine-rhodei.conf
+vendor/etc/thermal-engine-rhodec.conf
 vendor/etc/thermal-engine.conf
 
 # Touchscreen firmware
@@ -292,7 +292,7 @@ vendor/firmware/tm_novatek_ts_mp.bin
 # vendor/lib/camera/com.mot.eeprom.mot_gt24p64e_ov16a1q_eeprom.so
 # vendor/lib64/hw/motorola.hardware.camera.imgtuner@1.0-impl.so
 # vendor/lib64/motorola.hardware.camera.imgtuner@1.0.so
-# system_ext/etc/permissions/com.motorola.imagertuning5.rhodei.xml
+# system_ext/etc/permissions/com.motorola.imagertuning5.rhodec.xml
 
 # Display
 # vendor/lib64/com.motorola.hardware.display.panel@1.0.so
@@ -339,3 +339,25 @@ vendor/firmware/tm_novatek_ts_mp.bin
 # vendor/firmware/ipa_fws.b03
 # vendor/firmware/ipa_fws.b04
 # vendor/firmware/ipa_fws.mdt
+# Global NFC, Chipone panel firmware and camera/panel additions
+vendor/bin/hw/android.hardware.nfc@1.2-service
+vendor/etc/init/android.hardware.nfc@1.2-service.rc
+vendor/etc/libnfc-nci.conf
+vendor/etc/libnfc-nxp.conf
+vendor/etc/nfc_calibration.txt
+vendor/etc/qdcm_calib_data_mipi_mot_vid_tm_icnl9922_fhdp_645_120.xml
+vendor/etc/qdcm_calib_data_nt36672e_60_Hz_fhd_plus_video_mode_panel_without_DSC.xml
+vendor/etc/qdcm_calib_data_nt36672e_fhd_plus_120Hz_Video_panel.xml
+vendor/etc/qdcm_calib_data_nt36672e_fhd_plus_144Hz_video_panel.xml
+vendor/firmware/ICNL9922.bin
+vendor/lib/hal_libnfc.so
+vendor/lib/libsn100u_fw.so
+vendor/lib/nfc_nci_nxp.so
+vendor/lib/vendor.nxp.nxpnfc@2.0.so
+vendor/lib/vendor.nxp.nxpnfclegacy@1.0.so
+vendor/lib64/hal_libnfc.so
+vendor/lib64/libpn557_fw.so
+vendor/lib64/libsn100u_fw.so
+vendor/lib64/nfc_nci_nxp.so
+vendor/lib64/vendor.nxp.nxpnfc@2.0.so
+vendor/lib64/vendor.nxp.nxpnfclegacy@1.0.so

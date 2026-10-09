@@ -40,36 +40,34 @@ on post-fs-data
 on fs
     insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/leds_aw99703.ko
     insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/sm5350_bl.ko
+    insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/wl2864c.ko
+    insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/ocp2138.ko
     insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/nova_0flash_mmi.ko
+    insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/ili9882_mmi.ko
+    insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/chipone_tddi_fhd_mmi.ko
     insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/mmi_charger.ko
-    insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/bq2597x_mmi_iio.ko
     insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/mmi_discrete_charger_class.ko
     insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/sgm4154x_charger.ko
     insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/bq2589x_charger.ko
     insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/mmi_discrete_charger.ko
     insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/qpnp_adaptive_charge.ko
     insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/tcpc_class.ko
-    insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/tcpc_rt1711h.ko
     insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/tcpc_sgm7220.ko
     insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/rt_pd_manager.ko
-    insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/mmi_discrete_turbo_charger.ko
 
 on boot && property:ro.vendor.mot.gki.path=5.4-gki
     insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/nfc_i2c.ko
 
 on charger
     insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/mmi_charger.ko
-    insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/bq2597x_mmi_iio.ko
     insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/mmi_discrete_charger_class.ko
     insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/sgm4154x_charger.ko
     insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/bq2589x_charger.ko
     insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/mmi_discrete_charger.ko
     insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/qpnp_adaptive_charge.ko
     insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/tcpc_class.ko
-    insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/tcpc_rt1711h.ko
     insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/tcpc_sgm7220.ko
     insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/rt_pd_manager.ko
-    insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/mmi_discrete_turbo_charger.ko
 
 service capsense_reset /vendor/bin/capsense_reset
     class core

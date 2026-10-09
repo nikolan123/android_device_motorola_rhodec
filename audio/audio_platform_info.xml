@@ -177,8 +177,8 @@
 	<device name="SND_DEVICE_IN_HANDSET_MIC_AEC_NS" acdb_id="4" />
 	<device name="SND_DEVICE_IN_HANDSET_MIC_NS" acdb_id="4" />
 	<device name="SND_DEVICE_IN_HANDSET_MIC_NN" acdb_id="318" />
-	<device name="SND_DEVICE_IN_HANDSET_MIC_TOP" acdb_id="4" />
-	<device name="SND_DEVICE_IN_HANDSET_MIC_NN_TOP" acdb_id="4" />
+	<device name="SND_DEVICE_IN_HANDSET_MIC_TOP" acdb_id="88" />
+	<device name="SND_DEVICE_IN_HANDSET_MIC_NN_TOP" acdb_id="88" />
 	<device name="SND_DEVICE_IN_SPEAKER_DMIC" acdb_id="35" />
 	<device name="SND_DEVICE_IN_SPEAKER_DMIC_AEC" acdb_id="35" />
 	<device name="SND_DEVICE_IN_SPEAKER_DMIC_AEC_NS" acdb_id="35" />
@@ -226,7 +226,7 @@
 	<device name="SND_DEVICE_IN_VOICE_REC_DMIC_STEREO" acdb_id="35" />
 	<device name="SND_DEVICE_IN_CAPTURE_FM" acdb_id="90" />
 	<device name="SND_DEVICE_IN_VOICE_SPEAKER_MIC_NN" acdb_id="301" />
-	<device name="SND_DEVICE_IN_VOICE_HEADSET_MIC_NN" acdb_id="8" />
+	<device name="SND_DEVICE_IN_VOICE_HEADSET_MIC_NN" acdb_id="302" />
 	<device name="SND_DEVICE_IN_VOICE_USB_HEADSET_MIC_NN" acdb_id="303" />
 	<device name="SND_DEVICE_IN_SPEAKER_MIC_NN" acdb_id="304" />
 	<device name="SND_DEVICE_IN_SPEAKER_MIC_AEC_NN" acdb_id="304" />
@@ -273,6 +273,7 @@
         <device name="SND_DEVICE_OUT_SPEAKER" interface="SEC_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_CQA_SPEAKER" interface="SEC_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_VOLTE_NB_SPEAKER" interface="SEC_MI2S_RX"/>
+        <device name="SND_DEVICE_OUT_VOLTE_NB_SPEAKER_2" interface="SEC_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_SPEAKER_EXTERNAL_1" interface="SEC_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_SPEAKER_EXTERNAL_2" interface="SEC_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_SPEAKER_REVERSE" interface="SEC_MI2S_RX"/>
