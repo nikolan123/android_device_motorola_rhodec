@@ -4,6 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+from pathlib import Path
+
 from extract_utils.fixups_blob import (
     blob_fixup,
     blob_fixups_user_type,
@@ -64,3 +66,11 @@ if __name__ == '__main__':
         module, 'sm6375-common', module.vendor
     )
     utils.run()
+    # Attach the stock init file to the selected prebuilt service. A copy rule
+    # conflicts with the source service's init_rc installation target.
+    bp_path = Path(module.vendor_path) / 'Android.bp'
+    bp = bp_path.read_text()
+    marker = '    name: "android.hardware.nfc@1.2-service",\n'
+    assert bp.count(marker) == 1
+    bp = bp.replace(marker, marker + '    init_rc: ["proprietary/vendor/etc/init/android.hardware.nfc@1.2-service.rc"],\n')
+    bp_path.write_text(bp)
