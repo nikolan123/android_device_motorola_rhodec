@@ -49,8 +49,9 @@ BOOT_SECURITY_PATCH := 2025-01-01
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
 # Verified Boot
-BOARD_AVB_ROLLBACK_INDEX := 29
-BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := 29
+# Matching global stock archive uses index 21; never inherit the Indian index.
+BOARD_AVB_ROLLBACK_INDEX := 21
+BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := 21
 
 # inherit from the proprietary version
 include vendor/motorola/rhodec/BoardConfigVendor.mk

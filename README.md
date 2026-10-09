@@ -5,5 +5,5 @@ Global layout and hardware selections are based on the RETEU stock dump and
 live phone audit. No bootloader/radio firmware may be packaged.
 
 The kernel needs global module integration; vendor blobs must be regenerated
-from global stock before building. Rollback indexes and resolved build
-configuration still need validation. This tree has not produced a tested ROM.
+from global stock before building. The stock archive rollback index is 21; live top-level AVB metadata and the
+resolved Android build configuration still need validation. This tree has not produced a tested ROM.
