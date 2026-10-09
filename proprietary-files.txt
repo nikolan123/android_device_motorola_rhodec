@@ -341,7 +341,7 @@ vendor/firmware/tm_novatek_ts_mp.bin|8daa9e6dcd7beff3b938fe2e0474a886d45543e7
 # vendor/firmware/ipa_fws.mdt
 # Global NFC, Chipone panel firmware and camera/panel additions
 vendor/bin/hw/android.hardware.nfc@1.2-service|1ca36ab5c096cc56a67d59b51a712dc75800557f
-vendor/etc/init/android.hardware.nfc@1.2-service.rc;EXTRACT_ONLY|5ff98e63724195b896edab2aaf2dbf072b4fd344
+vendor/etc/init/android.hardware.nfc@1.2-service.rc:vendor/etc/init/android.hardware.nfc@1.2-service.rhodec.rc;EXTRACT_ONLY|5ff98e63724195b896edab2aaf2dbf072b4fd344
 vendor/etc/libnfc-nci.conf|02a72fe13adec51528278a10dc5fe5497c2bcacf
 vendor/etc/libnfc-nxp.conf|5baf9e033dd19f63cc8708793212bc5484e13456
 vendor/etc/nfc_calibration.txt|d8752bb10780d8aca0a8d8d7ba05c7a14606630d

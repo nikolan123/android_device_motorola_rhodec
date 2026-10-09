@@ -72,5 +72,5 @@ if __name__ == '__main__':
     bp = bp_path.read_text()
     marker = '    name: "android.hardware.nfc@1.2-service",\n'
     assert bp.count(marker) == 1
-    bp = bp.replace(marker, marker + '    init_rc: ["proprietary/vendor/etc/init/android.hardware.nfc@1.2-service.rc"],\n')
+    bp = bp.replace(marker, marker + '    init_rc: ["proprietary/vendor/etc/init/android.hardware.nfc@1.2-service.rhodec.rc"],\n')
     bp_path.write_text(bp)
