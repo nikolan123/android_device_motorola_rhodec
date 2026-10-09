@@ -353,11 +353,18 @@ vendor/firmware/ICNL9922.bin|7e1714648fd468cb81fe34ae11b00356af3e81d2
 vendor/lib/hal_libnfc.so|b2e71d87fab10409d0f8494b955177ac58d7cb49
 vendor/lib/libsn100u_fw.so|3f2e06db925881ef846e93b39d2d5563ad8e0995
 vendor/lib/nfc_nci_nxp.so|9f0aa6c5968db35c1a07a004f85d5d559e1d3193
-vendor/lib/vendor.nxp.nxpnfc@2.0.so|06ec85972d9ccc3c42ed5a6a1aa44f1a4830fadb
 vendor/lib/vendor.nxp.nxpnfclegacy@1.0.so|248b0f4ce636b6d1c23d74459c3c51d1dfd4b61a
 vendor/lib64/hal_libnfc.so|ccaf8e6c5f7285727991d965277689a3d35eb0ad
 vendor/lib64/libpn557_fw.so|80471aaf19c35f6fb47e69edd404e1e0529ba06b
 vendor/lib64/libsn100u_fw.so|3f2e06db925881ef846e93b39d2d5563ad8e0995
 vendor/lib64/nfc_nci_nxp.so|b1596711b3d2d3800c627639e807fb98160176b4
-vendor/lib64/vendor.nxp.nxpnfc@2.0.so|86caf2ac452cb8190b11384bc0df009e9bb84bcb
 vendor/lib64/vendor.nxp.nxpnfclegacy@1.0.so|41ab5f44769411d30c77f28d1afaa191a0ac88b9
+
+# Stock NXP secure element dependencies required by the global NFC service
+vendor/lib/ese_client.so|8cd542297a5476066f931b67d041925c6ffa0b49
+vendor/lib/ese_spi_nxp.so|8517af640ff396657cc1534cc972cfb7cc5ce2e9
+vendor/lib/vendor.nxp.eventprocessor@1.0.so|aa5374cb448dc698bff2639acb718bbaaf43c86c
+vendor/lib64/ese_client.so|82fc6be6e1ab41061dc6868098d0d5deb2fd5388
+vendor/lib64/ese_spi_nxp.so|874c2f7181eb43eafc075a8ecce7ea7a18211e6f
+vendor/lib64/vendor.nxp.eventprocessor@1.0.so|24017ba5e5c037f42b4fada6d3da6f6ae832bca1
+vendor/etc/sn100u_pnx_ese_cplc.pnscr|111357295bb320716eeb57d15c24b74d0689a329
