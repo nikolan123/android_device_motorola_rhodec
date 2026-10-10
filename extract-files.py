@@ -46,6 +46,11 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libui.so', 'libui-v34.so'),
     'vendor/lib64/libmot_chi_desktop_helper.so': blob_fixup()
         .add_needed('libgui_shim_vendor.so'),
+    (
+        'vendor/lib/ese_spi_nxp.so',
+        'vendor/lib64/ese_spi_nxp.so',
+    ): blob_fixup()
+        .add_needed('libbase_shim.so'),
     'vendor/lib64/sensors.moto.so': blob_fixup()
         .add_needed('libbase_shim.so'),
 }  # fmt: skip
