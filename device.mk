@@ -29,6 +29,7 @@ PRODUCT_PACKAGES += \
     FrameworksResDevice \
     LineageApertureAppDevice \
     LineageSystemUIDevice \
+    SettingsResRhodec \
     SystemUIResDevice \
     WifiResDevice
 
@@ -114,3 +115,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES := $(filter-out %:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini,$(PRODUCT_COPY_FILES))
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
+
+# Global macro camera supports video up to 720p at 30 fps.
+PRODUCT_COPY_FILES := $(filter-out %:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_blair.xml,$(PRODUCT_COPY_FILES))
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/media/media_profiles_blair.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_blair.xml
+PRODUCT_COPY_FILES := $(filter-out %:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_holi.xml,$(PRODUCT_COPY_FILES))
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/media/media_profiles_holi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_holi.xml

@@ -5,7 +5,12 @@
 -->
 <resources>
     <!-- List of ID of auxiliary cameras that must be ignored by the app. -->
-    <string-array name="config_ignoredAuxCameraIds">
+    <string-array name="config_ignoredAuxCameraIds" />
+
+    <!-- Exclude unsupported macro video frame rates. -->
+    <string-array name="config_additionalVideoConfigurations">
         <item>2</item>
+        <item>sd|hd|fhd|uhd</item>
+        <item>-24|-60|-120</item>
     </string-array>
 </resources>
