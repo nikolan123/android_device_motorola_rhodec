@@ -22,6 +22,7 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(LOCAL_PATH)/framework_compatibility_matrix.xml
 
 # Inherit from motorola sm6375-common
+MOTOROLA_MEDIA_PROFILES_DIR := device/motorola/rhodec/media
 $(call inherit-product, device/motorola/sm6375-common/common.mk)
 
 # Overlays
@@ -115,9 +116,3 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES := $(filter-out %:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini,$(PRODUCT_COPY_FILES))
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
-
-# Global macro camera supports video up to 720p at 30 fps.
-PRODUCT_COPY_FILES := $(filter-out %:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_blair.xml,$(PRODUCT_COPY_FILES))
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/media/media_profiles_blair.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_blair.xml
-PRODUCT_COPY_FILES := $(filter-out %:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_holi.xml,$(PRODUCT_COPY_FILES))
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/media/media_profiles_holi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_holi.xml
